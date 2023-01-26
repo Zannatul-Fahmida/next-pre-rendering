@@ -13,8 +13,8 @@ const Posts = () => {
   const router = useRouter();
   const postId = router.query.pId;
   const { data, error } = useSWR(`${postId}`, fetcher);
-    if (error) return "An error has occured";
-    if (!data) return "Loading...";
+  if (error) return "An error has occured";
+  if (!data) return "Loading...";
   return (
     <div>
       <h2>{data.id}</h2>
